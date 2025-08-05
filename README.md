@@ -1,2 +1,4 @@
 # sy25-26
-python class :] (may contain tasty fried eggs)
+
+python class :] -august 5-
+
