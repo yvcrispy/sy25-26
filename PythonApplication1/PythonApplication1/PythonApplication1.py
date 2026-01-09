@@ -15,6 +15,7 @@ lineup.append(removed_band)
 gone = lineup.pop(0)
 print(lineup)
 
-for i in range(lineup):
+for item in lineup:
     print("tehe")
+
 # Continue the logic below...
