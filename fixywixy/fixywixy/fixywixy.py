@@ -49,13 +49,13 @@ while not game_over:
         score += 1
         print(f"Score: {score}")
         enemy_pos = [random.randint(0, WIDTH - enemy_size), 0]
+        #^^^ that one
 
     # --- BUG 3: Collision Detection ---
     # This logic is mathematically incorrect for rectangular collision
-    if (enemy_pos[0] == player_pos[0]) and (enemy_pos[1] == player_pos[1]):
+    if (enemy_pos[0] > player_pos[0]) and (enemy_pos[0] < player_pos[0] + player_size) and (enemy_pos[1] > player_pos[1]) and (enemy_pos[1] < player_pos[1] + player_size):
         print("Game Over!")
         game_over = True
-
     # Drawing
     screen.fill((0, 0, 0))
     
