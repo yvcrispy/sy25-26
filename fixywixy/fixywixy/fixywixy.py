@@ -58,7 +58,18 @@ while not game_over:
         game_over = True
     # Drawing
     screen.fill((0, 0, 0))
-    
+
+    class player(pygame.sprite.Sprite):
+        def __init__(self):
+            super().__init__() 
+            self.image = pygame.image.load("scringle.png")
+            self.rect = self.image.get_rect()
+            
+        def draw(self, screen):
+            screen.blit(self.image, (player_pos[0], player_pos[1]))
+    scringle = player()
+    scringle.draw(player_pos[0])
+
     pygame.draw.rect(screen, RED, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
     pygame.draw.rect(screen, BLUE, (player_pos[0], player_pos[1], player_size, player_size))
 
